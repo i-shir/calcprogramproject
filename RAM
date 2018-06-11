@@ -1,0 +1,35 @@
+#iroha and emily
+#11 June 2018
+#RAM
+#y=x^2
+
+S=float(input('Start value of interval:'))
+E=float(input('End value of interval:'))
+N=float(input('number of rectangles:'))
+
+H=float((E-S)/N)
+print(H)
+
+counter = 0
+
+while counter<E:
+    
+    counter += H
+"""
+while k is in range (0,H):
+    print ('1')
+"""
+#LRAM
+
+#y=(S**2)
+#y=(y*d)
+
+#for y in range (S,E)
+
+#LRAM equation
+#L = N(y+y)
+#print('LRAM:', L)
+
+
+
+#RRAM
