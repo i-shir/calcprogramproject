@@ -12,23 +12,16 @@ print(H)
 
 counter = 0
 
+L=[]
+
 while counter<E:
     
+    y=float(((S+(counter*H))**2)*H)
+    L.append(y)
     counter += H
-"""
-while k is in range (0,H):
-    print ('1')
-"""
-#LRAM
+    
+print('LRAM:',sum(L))
 
-#y=(S**2)
-#y=(y*d)
-
-#for y in range (S,E)
-
-#LRAM equation
-#L = N(y+y)
-#print('LRAM:', L)
 
 
 
