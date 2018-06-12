@@ -3,26 +3,49 @@
 #RAM
 #y=x^2
 
+def Y(X):
+    return X*X
+    
+    
 S=float(input('Start value of interval:'))
 E=float(input('End value of interval:'))
 N=float(input('number of rectangles:'))
 
 H=float((E-S)/N)
-print(H)
 
+#LRAM
 counter = 0
-
 L=[]
 
-while counter<E:
-    
-    y=float(((S+(counter*H))**2)*H)
-    L.append(y)
+while counter<((E-S-H)/H):
+    X=float(S+(counter))
+    #Y=((X**2))
+    A=H*Y(X)
+    L.append(A)
     counter += H
-    
 print('LRAM:',sum(L))
 
-
-
-
 #RRAM
+counter = H
+R=[]
+
+while counter<(E-S+H):
+    x=float(S+(counter))
+    #y=((x**2))
+    a=H*Y(x)
+    R.append(a)
+    counter += H
+print('RRAM:',sum(R))
+
+#MRAM
+counter = (H/2)
+M=[]
+
+while counter<((E-(H/2))-S):
+    Z=float(S+(counter))
+    B=H*Y(Z)
+    print('print Z:',Z)
+    print('print area:',B)
+    M.append(B)
+    counter += H
+print('MRAM:',sum(M))
