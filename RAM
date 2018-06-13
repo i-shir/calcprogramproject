@@ -6,7 +6,6 @@
 def Y(X):
     return X*X
     
-    
 S=float(input('Start value of interval:'))
 E=float(input('End value of interval:'))
 N=float(input('number of rectangles:'))
@@ -29,7 +28,7 @@ print('LRAM:',sum(L))
 counter = H
 R=[]
 
-while counter<(E-S+H):
+while counter<=(E-S):
     x=float(S+(counter))
     #y=((x**2))
     a=H*Y(x)
@@ -41,11 +40,13 @@ print('RRAM:',sum(R))
 counter = (H/2)
 M=[]
 
-while counter<((E-(H/2))-S):
+while counter<=((E-(H/2))-S):
     Z=float(S+(counter))
     B=H*Y(Z)
-    print('print Z:',Z)
-    print('print area:',B)
     M.append(B)
     counter += H
 print('MRAM:',sum(M))
+
+
+
+
